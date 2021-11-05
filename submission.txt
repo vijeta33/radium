@@ -1,0 +1,215 @@
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ mkdir source
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ mkdir destination
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ ls
+destination/  source/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd source
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ ls
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ cat > dummy.txt
+i am vijeta Hiwarkar 
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ ls
+dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ cat dummy.txt
+i am vijeta Hiwarkar 
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ ls
+destination/  source/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ ls
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd..
+bash: cd..: command not found
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ pwd
+/c/Users/HP/vijeta
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cp -r source/dummy.txt destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd source/dummy.txt destination/
+bash: cd: too many arguments
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cp source/dummy.txt destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ ls
+dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cat dummy.txt
+i am vijeta Hiwarkar 
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd source/
+bash: cd: source/: No such file or directory
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ ls
+dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cat dummy.txt
+i am vijeta Hiwarkar 
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd source
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ ls
+dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ cat dummy.txt
+i am vijeta Hiwarkar 
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ cd..
+bash: cd..: command not found
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ ls
+dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ rm dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ ls
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cp -r source/. destination
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ ls
+dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ rm dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ ls
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ ls
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ mv source/dummy.txt destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ ls
+dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cat dummy.txt
+i am vijeta Hiwarkar 
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd ..
+
+i am vijeta Hiwarkar FunctionUp  is an online bootcamp . FunctionUp prepares candidates for high paying jobs through intensive  training. FunctionUp provides focus oHP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd source
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ ls
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ cd destination/
+bash: cd: destination/: No such file or directory
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ cd destination
+bash: cd: destination: No such file or directory
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/source
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd destination/
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ vim dummy.txt
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cat dummy.txt
+i am vijeta Hiwarkar FunctionUp  is an online bootcamp . FunctionUp prepares candidates for high paying jobs through intensive  training. FunctionUp provides focus on hands and practical training.
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ grep -i "FunctionUp" dummy.txt
+i am vijeta Hiwarkar FunctionUp  is an online bootcamp . FunctionUp prepares candidates for high paying jobs through intensive  training. FunctionUp provides focus on hands and practical training.
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ grep -i "vijeta" dummy.txt
+i am vijeta Hiwarkar FunctionUp  is an online bootcamp . FunctionUp prepares candidates for high paying jobs through intensive  training. FunctionUp provides focus on hands and practical training.
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta/destination
+$ cd ..
+
+HP@DESKTOP-K6A07FL MINGW64 ~/vijeta
+$ cd ..
+
