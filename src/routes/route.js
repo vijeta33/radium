@@ -10,6 +10,7 @@ const blogcontroller =require("../controllers/Blogcontroller")
 router.post('/BASE_URL/authors', authorController.createAuthor )
 
 router.post('/blogs', blogcontroller.myBlogCreation )
+router.get('/getdata',blogcontroller.returnBlogsFiltered);
 
 
 

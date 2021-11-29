@@ -21,9 +21,29 @@ const myBlogCreation = async function (req, res) {
 }
 
 const returnBlogsFiltered = async function (req, res) {
-let blogFound = await BlogModel.find({ authorId : "xx" });
-
+    console.log(req.query);
+    let blogFound=await BlogModel.find(req.query);
+    let len =blogFound.length;
+    let arr=[];
+    for(let i=0;i<len;i++)
+    {
+        if(blogFound[i].isDeleted==false && blogFound[i].isPublished==true || blogFound[i].isPublished==false)
+        {
+            arr.push(blogFound[i]);
+        }
+        else{
+            continue
+        }
+    }
+    console.log(arr);
+    if(arr){
+        res.status(200).send({msg:"succes",data:arr});
+    }
+    else{
+        res.status(404).send({msg:"No such book is found"});
+    }
 }
 
 
 module.exports.myBlogCreation = myBlogCreation
+module.exports.returnBlogsFiltered = returnBlogsFiltered
