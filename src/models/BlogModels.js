@@ -22,13 +22,13 @@ const BlogSchema = new mongoose.Schema({
         type:Array,
     },
     category:{
-        type:Array,
-        required:true,
+        type:String,   
+        required:true
 
     },
+    
     subcategory:{
-        type:String,
-
+        type:Array,
     },
 
     isPublished:{
