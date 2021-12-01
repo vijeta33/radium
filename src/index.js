@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const mongoose = require('mongoose');
 const { response } = require('express');
 
-mongoose.connect("mongodb+srv://user-open-to-all:hiPassword123@cluster0.xgk0k.mongodb.net/bharatesh-database?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://monty-python:SnYUEY4giV9rekw@functionup-backend-coho.0zpfv.mongodb.net/vijetahiwarkar_db?authSource=admin&replicaSet=atlas-60843q-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true")
     .then(() => console.log('mongodb running on 27017'))
     .catch(err => console.log(err))
 
