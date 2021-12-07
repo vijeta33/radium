@@ -1,17 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const jwt = require('jsonwebtoken')
-const axios = require("axios")
-const coinsModel = require("../models/coinsModel")
 
-const userController =require("../controllers/usercontroller")
+const CollegeController =require("../controllers/Collegecontroller")
 
 
 
 
 
 
-router.get("/assets" , userController.getcoins)
+router.post('/functionup/colleges', CollegeController.registercollege)
+router.post('/functionup/interns',CollegeController.createintern)
+router.get('/functionup/collegeDetails',CollegeController.alldetails)
+
 
 
 
