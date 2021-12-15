@@ -14,4 +14,4 @@ const urlSchema = new mongoose.Schema(
 //   return urlRegex.test(val);
 // }, "Invalid URL.");
 
-module.exports = mongoose.model("Url", urlSchema);
+module.exports = mongoose.model("urls", urlSchema);
