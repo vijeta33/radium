@@ -14,7 +14,7 @@ const mongoose = require('mongoose')
 
 
 
-mongoose.connect("mongodb+srv://monty-python:SnYUEY4giV9rekw@functionup-backend-coho.0zpfv.mongodb.net/group3_Magnificent?retryWrites=true&w=majority", { useNewUrlParser: true })
+mongoose.connect("mongodb+srv://monty-python:SnYUEY4giV9rekw@functionup-backend-coho.0zpfv.mongodb.net/group3_Magnificent?authSource=admin&replicaSet=atlas-60843q-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true")
     .then(() => console.log('mongodb Rock n Roll on 3000'))
     .catch(err => console.log(err))
    

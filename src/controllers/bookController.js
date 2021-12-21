@@ -249,7 +249,7 @@ const deleteBookByID = async (req, res) => {
         }
         const findBook = await bookModel.findById({ _id: params })
         if (!findBook) {
-            return res.status(404).send({ status: false, message: `No book found by ${params}` })
+            return res.status(404).send({ status: false, message: `No book found ` })
         } else if (findBook.userId != req.userId) {
             return res.status(403).send({
                 status: false,

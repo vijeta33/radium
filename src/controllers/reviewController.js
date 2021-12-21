@@ -78,6 +78,8 @@ const addReview = async function (req, res) {
         let reviewdata = await reviewModel.create(createReviewdata)
         await booksModel.findOneAndUpdate({ _id: bookId, isDeleted: false }, { $inc: { reviews: 1 } })
 
+        let newdata = await reviewModel.find(reviewdata).select({ deletedAt: 0, isDeleted: 0, updatedAt: 0, createdAt: 0, __v: 0 })
+
         res.status(201).send({ status: true, data: reviewdata })
     } catch (error) {
         res.status(500).send({ status: false, msg: error.message });
