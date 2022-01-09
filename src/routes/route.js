@@ -1,17 +1,34 @@
 const express = require('express');
 const router = express.Router();
 
-const CollegeController =require("../controllers/Collegecontroller")
+const userController =require("../controllers/usercontroller")
+const validator = require('../validation/validation');
+const myMiddleware = require('../middleware/middleware');
+const questionController = require('../controllers/questionController')
+const answerController = require('../controllers/answerController')
 
 
 
 
 
 
-router.post('/functionup/colleges', CollegeController.registercollege)
-router.post('/functionup/interns',CollegeController.createintern)
-router.get('/functionup/collegeDetails',CollegeController.alldetails)
+router.post('/register',validator.checkUser, userController.createUser)
+router.post('/login', userController.userLogin)
+router.get('/user/:userId/profile', myMiddleware.checkLogin,validator.authorizer, userController.getuserById) 
+router.put('/user/:userId/profile', myMiddleware.checkLogin,validator.authorizer,validator.checkUpdateUser, userController.updateProfile )
 
+
+router.post('/question', myMiddleware.checkLogin, questionController.createquestion)
+router.get('/questions',questionController.getQuestions)
+router.get('/questions/:questionId',questionController.getQuestionById )
+router.put('/questions/:questionId',myMiddleware.checkLogin,questionController. updatequestion)
+router.delete('/questions/:questionId',myMiddleware.checkLogin, questionController.deleteQuestion)
+
+
+router.post('/answer',myMiddleware.checkLogin,answerController.createAnswer)
+router.get('/questions/:questionId/answer',answerController.getdetails)
+router.put('/answer/:answerId',myMiddleware.checkLogin,answerController.updateanswer)
+router.delete('/answer/:answerId',myMiddleware.checkLogin,answerController.deleteanswer)
 
 
 
